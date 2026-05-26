@@ -1767,3 +1767,63 @@ textarea.input-field {
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
 
 }
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f1e7;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.menu-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 { color: #d35400; font-size: 2.5rem; }
+
+.menu-section h2 {
+    border-bottom: 2px solid #d35400;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    color: #2c3e50;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item-price {
+    float: right;
+    font-weight: bold;
+    color: #d35400;
+}
+
+.item-desc {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
