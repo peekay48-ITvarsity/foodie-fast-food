@@ -1827,3 +1827,83 @@ h1 { color: #d35400; font-size: 2.5rem; }
     font-size: 0.9rem;
     margin-top: 5px;
 }
+
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.menu-section h2 {
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #e67e22;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+.item-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+/* Tablet and Desktop Layout */
+@media (min-width: 600px) {
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
