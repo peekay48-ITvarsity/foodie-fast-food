@@ -1907,3 +1907,34 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.menu-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+}
+
+.menu-item {
+  display: flex; /* Image on left, text on right */
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between; /* Pushes price to the right */
+  border-bottom: 1px dashed #777;
+}
+
+.price {
+  color: #FE043C; /* Highlight prices */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column; /* Stack image above text on mobile */
+    text-align: center;
+  }
+}
