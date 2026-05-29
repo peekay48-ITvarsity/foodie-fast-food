@@ -1827,3 +1827,156 @@ h1 { color: #d35400; font-size: 2.5rem; }
     font-size: 0.9rem;
     margin-top: 5px;
 }
+
+/* GLOBAL STYLES START */
+/* For all the content in our pages I remove the default margin and padding, setting the font to first
+    pick the user's system font or fall to sans-serif. I also used the box-sizing: border-box property to
+    control how the width and height of elements are calculated, 
+    particularly in relation to their borders and padding. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+/* NAVBAR START*/
+/* We set the header to sticky so that is sticks to the top when scrolling. I used the top: 0 
+   properts to ensure that It is always fixed at the top. I also used the z-index so that
+   the header always appers on top of all the content when scrolling */
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: rgb(22, 102, 223);
+    justify-content: center;
+    padding: 20px 30px;
+}
+/* We set the width to a 100% of the header but the maximum width will be capped at 1200px so
+   that in larger devices it will always be in maximum 1200px. Since I have a logo and the list of
+   nav items, I used the flex property in order to access the justify content property since I want the
+   logo to be on the left and the list to be on the right (Space between)*/
+nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+/* I use the inline flex property to ensure that my nav items always be arranged horizontally, then I
+    aligned the items (logo and list) in the center so that they are arranged at the center versically */
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+nav img {
+    width: 50px;
+}
+/* Removing the default decoration and setting the text color to white so that the colors match. */
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+/* Navbar End */
+/* GLOBAL STYLES END */
+
+/* Home Screen start */
+main {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+}
+/* For the list of images I used a display of grid and setting the gap to 20px so that we can have spaces between our images
+For the grid template columns property, I used a repeat with an autofit and a minmax so that we can have
+a responsive layout. If the content doesn't meet the 300px width
+then it will automatically take the entire width*/ 
+.products {
+    text-align: center;
+    margin-top: 30px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.products li {
+    box-shadow: 0px 0px 20px 0px grey;
+    border-radius: 13px;
+    padding: 10px 0;
+}
+.products li img {
+    transition: .5s;
+}
+.products li:hover img {
+    transform: scale(1.05);
+}
+/* Home screen end */
+
+/* About Start */
+.container h1 {
+    text-align: center;
+    padding: 20px;
+}
+.about {
+    max-width: 600px;
+    margin: 30px auto;
+}
+.about img {
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px grey;
+    padding: 30px;
+    margin: 30px 0;
+}
+/* About End */
+
+/* Contact us Start */
+.about {
+    padding: 20px;
+}
+.about h2 {
+    margin-bottom: 10px;
+}
+.about ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.about form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 100px;
+}
+.about form input {
+    padding: 5px 20px;
+}
+.about .top {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.about .top >* {
+    flex: 1;
+}
+.about form :nth-child(2), :nth-child(3) {
+    width: 100%;
+}
+.about form :nth-child(3) {
+    display: block;
+}
+textarea {
+    padding: 10px 20px;
+}
+.about button {
+    margin-top: 20px;
+    border: 2px solid grey;
+    background-color: aqua;
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Contact us End */
