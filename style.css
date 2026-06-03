@@ -1869,6 +1869,11 @@ section h3{
   margin: 0 auto 20px;
 }
 
+.contact{
+  display: flex;
+  padding-left: 50px;
+}
+
 .contact p{
   background-color: #be662b;
   font-weight: 700px;
