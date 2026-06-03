@@ -1865,7 +1865,7 @@ section h3{
   background-color: #be662b;
   padding: 10px;
   border-radius: 5px;
-  display: inline-block;
+  display: center;
   margin: 0 auto 20px;
 }
 
@@ -1874,6 +1874,6 @@ section h3{
   font-weight: 700px;
   color: #000;
   padding: 10px;
-  display: inline-block;
+  display: center;
   margin: auto;
 }
